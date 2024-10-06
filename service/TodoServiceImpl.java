@@ -30,7 +30,10 @@ public class TodoServiceImpl implements TodoService {
     @Override 
     public void serviceAddTodo(String title) { 
         Todo newTodo = new Todo(title); 
-        todoRepository.repoAddTodo(newTodo); 
+        if (!todoRepository.isDuplicate(title))
+        {
+            todoRepository.repoAddTodo(newTodo); 
+        }
     } 
 
     @Override 

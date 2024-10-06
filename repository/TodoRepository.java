@@ -10,4 +10,6 @@ public interface TodoRepository {
     boolean repoRemoveTodo(Integer idTodo); 
     
     boolean repoUpdateTodo(Integer idTodo, String newTitle, boolean newStatus); 
+
+    boolean isDuplicate(String title);
 }

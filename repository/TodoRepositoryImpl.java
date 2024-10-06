@@ -76,7 +76,7 @@ public class TodoRepositoryImpl implements TodoRepository {
   }
 
 
-  private boolean isDuplicate(String title) {
+  public boolean isDuplicate(String title) {
     String titleLowerCase = title.toLowerCase();  // Konversi judul ke huruf kecil
     for (Todo todo : data) {
       if (todo != null && todo.getTitle().toLowerCase().equals(titleLowerCase)) {
